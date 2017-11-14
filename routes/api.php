@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('event', 'EventController');
+Route::apiResource('company', 'CompanyController');
+Route::apiResource('booking', 'BookingController');
+Route::apiResource('stand', 'StandController');
